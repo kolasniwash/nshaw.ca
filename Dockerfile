@@ -4,8 +4,7 @@ WORKDIR /app
 COPY /content /app/content
 COPY /templates /app/templates
 COPY /config.toml /app/config.toml
-COPY /static /app/static
-COPY /themes /app/themes
+COPY /themes/zola-bearblog /app/themes/zola-bearblog
 COPY fly.toml /app/fly.toml
 RUN ["zola", "build"]
 
