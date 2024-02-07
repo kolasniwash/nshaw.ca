@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <main>
+    {{ section.content | safe }}
+    <h2>Latest Posts</h2>
+    {% set post_section = get_section(path="posts/_index.md") %}
+    {% for post in post_section.pages %}
+    <li>
+      <span>
+        <i>
+          <time datetime="{{post.date}}" pubdate>{{post.date}}</time>
+        </i>
+      </span>
+      <a href="{{post.permalink}}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+    <a href="https://google.gom">View all →</a>
+  </main>
+{% endblock %}
