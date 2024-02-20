@@ -10,11 +10,11 @@ We can initiate cargo's test suite using the command `cargo test`. By default `c
 ### Types of tests
 Each testing type is used in a specific situation. Rust does a good job making it clear which type of test is applicable for a given type of testing. In the table below we see a simple summary of when and how to use each testing type.
 
-| **Type**      | **Location**            | **Description**                                                                                                                                                         |
-|---------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Doc Test      | Source documentation | Describe functionality of code in documentation. <br/>Doc tests appear as code sampled in generated documentation. <br/>Use as validation checks of demonstrated usage. |
-| Private Test  | Source file             | Tests for private functions. Decorate test mod with `#[cfg(tests)]` and each test with `#[test]`. Use for private function unit testing. Not included in final crate.   |
-| Public Test   | `/tests/`       | Tests for public module testing. Code is made part of final crate. Use for unit testing public functions and integration testing.                                       |
+| **Type**      | **Location**            | **Description**                                                                                                                                               |
+|---------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Doc Test      | Source documentation | Describe functionality of code in documentation. Doc tests appear as code sampled in generated documentation. Use as validation checks of demonstrated usage. |
+| Private Test  | Source file             | Tests for private functions. Decorate test mod with `#[cfg(tests)]` and each test with `#[test]`. Use for private function unit testing. Not included in final crate. |
+| Public Test   | `/tests/`       | Tests for public module testing. Code is made part of final crate. Use for unit testing public functions and integration testing.                             |
 
 ### Handling tests
 When testing we need to tell the test compiler what code to run as tests. We also need to distinguish between indivdual tests, tests that should panic, and tests that are not yet implemented. To do this we use test handlers that decorate our testing module and functions. Here are some of the test handlers we can use:
