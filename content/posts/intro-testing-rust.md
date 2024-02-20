@@ -8,17 +8,17 @@ Rust has three ways you can test your code: doc tests, private tests, and public
 We can initiate cargo's test suite using the command `cargo test`. By default `cargo test` runs all tests in the project. To run a single test, use `cargo test test_name`.
 
 ### Types of tests
-How do you know when to use each type of test? Here's a quick guide:
+Each testing type is used in a specific situation. Rust does a good job making it clear which type of test is applicable for a given type of testing. In the table below we see a simple summary of when and how to use each testing type.
 
-| **Test Type** | **Location**              | **Description**                                                                                                              |
-|---------------|---------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Doc Test      | Source file documentation | Use to describe functionality of code in documentation. Doc tests appear as code sampled in generated documentation.         |
-| Private Test  | Source file               | Use for private functions. Decorate test mod with `#[cfg(tests)]` and each test with `#[test]`. Not included in final crate. |
-| Public Test   | `/tests/` directory       | Use for public module testing. Code is made part of final crate.                                                             |
+| **Type**      | **Location**            | **Description**                                                                                                                                                         |
+|---------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Doc Test      | Source documentation | Describe functionality of code in documentation. <br/>Doc tests appear as code sampled in generated documentation. <br/>Use as validation checks of demonstrated usage. |
+| Private Test  | Source file             | Tests for private functions. Decorate test mod with `#[cfg(tests)]` and each test with `#[test]`. Use for private function unit testing. Not included in final crate.   |
+| Public Test   | `/tests/`       | Tests for public module testing. Code is made part of final crate. Use for unit testing public functions and integration testing.                                       |
 
 ### Handling tests
 When testing we need to tell the test compiler what code to run as tests. We also need to distinguish between indivdual tests, tests that should panic, and tests that are not yet implemented. To do this we use test handlers that decorate our testing module and functions. Here are some of the test handlers we can use:
-Different test handlers
+
 - `#[cfg(test)]`: Only compile and include when running test suite
 - `#[test]`: Identify a test function
 - `#[should_panic]`: A test that should panic
@@ -27,7 +27,7 @@ Different test handlers
 ## Example testing private functions
 Let's look at a simple example of testing a struct from an Advent of Code problem. In the problem we are asked to update Santa's location based on input of specific characters.
 
-To hold Santa's location we define a struct of `Location` with an `x` and `y` coordinate. We also define a method `update_location` to update the location based on the input.
+To hold Santa's location we define a struct of `Location` with an `x` and `y` coordinate. We also define a struct method `update_location` to update the location based on the input.
 
 
 ```rust
@@ -58,7 +58,7 @@ impl Location {
 
 While this is a simple example it allows us to test the private struct using private tests. Within the same source file we define a tests module and decorate it with `#[cfg(test)]`.
 
-First test checks that when an invalid move character is passed, the location does not change.
+The first test checks that location does not change when an invalid move character is passed.
 ```rust
     #[test]
     fn test_invalid_move() {
