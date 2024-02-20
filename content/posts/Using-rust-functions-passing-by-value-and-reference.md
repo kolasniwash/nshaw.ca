@@ -1,5 +1,5 @@
 +++
-title = "Using Rust Functions Passing By Value And Reference"
+title = "Using rust functions passing by value and reference"
 date = "2024-02-06"
 +++
 Coming from Python as a main working language thinking about how I pass values around functions as an after thought. My last exposure to thinking about pointers was implementing Fourier transform data processing in C back in university studying Engineering Physics.

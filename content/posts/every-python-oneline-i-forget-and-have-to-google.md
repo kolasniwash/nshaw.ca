@@ -1,5 +1,5 @@
 +++
-title = "Every Python One Liner I Forget And Have To Google"
+title = "Every python one liner I forget and have to google"
 date = "2021-02-08"
 +++
 
