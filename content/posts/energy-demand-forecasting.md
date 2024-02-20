@@ -118,25 +118,19 @@ The LSTM problem framing was different from the SARIMA and Prophet. The feature 
 
 To formulte this problem using the same data processing as in the SARIMA and Prophet models you would arive at a single data structure per hourly output. In the graphic we see each hourly output has its own 3D input comprised of the lags (previous timestep data), features (energy, weather, day of week), and the sample day of forecast.
 
-{% raw %}
-<img src="http://nicholasjhana.github.io/assets/images/lstm-data-transform.png" alt="" class="full">
-{% endraw %}
+<img src="http://kolasniwash.github.io/assets/images/lstm-data-transform.png" alt="" class="full">
 
 The result is computationally intensive for SARIMA and Prophet as you would need to implemente 24 models to solve the supervised learning problem. This implementation is also not feasible in terms of dimensionality with a neural network (LSTM doesn't accept 4D data).
 
 The solution, as outlined in [one of the motivating papers](https://www.researchgate.net/publication/323847484_Statistical_and_Machine_Learning_forecasting_methods_Concerns_and_ways_forward) is to flatten the features and lags into a single vector. In this way each hourly segment has its own vector containing all the features at the set previous timesteps. The graphic below shows how the alternating green and blue lines represent the various features and lags compressed into a 1D vector.
 
-{% raw %}
-<img src="http://nicholasjhana.github.io/assets/images/lstm-data-input.png" alt="" class="full">
-{% endraw %}
+<img src="http://kolasniwash.github.io/assets/images/lstm-data-input.png" alt="" class="full">
 
 ### Cross validation descrption
 
 Walk forward validation is a standard backtesting methodology when working with timeseries data. The method allows for the validation of test results and reduces overfitting to a small sample of data. The following graphic shows how the whole data set is broken into training and test segments. Once the model has been tested, the previous test segment is introduced into the training data and the model is retrained. Finally the model is tested again on the expanded dataset.
 
-{% raw %}
-<img src="http://nicholasjhana.github.io/assets/images/walk-forward-validation.png" alt="" class="full">
-{% endraw %}
+<img src="http://kolasniwash.github.io/assets/images/walk-forward-validation.png" alt="" class="full">
 
 In this project the goal was to have a stadnard training window of 1 year, and a test window of 3 months. Within the training and test sets, a prediction was made once per calendar day. In practice however, this was too computatinoally intensive for the SARIMA, and prophet models given the resources of the project (2 weeks). The intervals were therefore reduced. 
 
@@ -194,4 +188,3 @@ Each model pipeline may be run independently. To replicate results, or build on 
 #### Communications
 * [Presentation Deck](https://github.com/nicholasjhana/short-term-energy-demand-forecasting/blob/master/presentation-short-term-load-forecasting.pdf)
 * [Presentation Video](https://youtu.be/KaWCwBD_UBA)
-* [Blog Post](link)
