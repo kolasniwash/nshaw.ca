@@ -11,8 +11,8 @@ jobs:
       - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
         with:
           gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          registry: gcr.io
+          registry: gcr.io/blog
           project_id: ${{ secrets.GCLOUD_BLOG_PROJECT_ID }}
-          image_name: nshawca/blog
+          image_name: nshawca
           image_tag: latest
           dockerfile: ./Dockerfile
