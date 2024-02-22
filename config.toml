@@ -1,6 +1,6 @@
 # The URL the site will be built for
 title = "NICHOLAS SHAW"
-base_url = "https://blog-2boeumsvda-ew.a.run.app"
+base_url = "https://nshaw.ca"
 description = "Restaurant at the end of the universe."
 
 # Whether to automatically compile all Sass files in the sass directory
