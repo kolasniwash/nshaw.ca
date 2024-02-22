@@ -2,7 +2,7 @@ name: Deploy to GCR
 on:
   push:
     branches:
-      - deploy/gh-action-gcr
+      - main
 jobs:
   build-and-push-to-gcr:
     runs-on: ubuntu-latest
