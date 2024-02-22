@@ -9,12 +9,14 @@
     <li>
       <span>
         <i>
-          <time datetime="{{post.date}}" pubdate>{{post.date}}</time>
+          <time datetime='{{ post.date | date(format='%+') }}' pubdate>
+            {{- post.date | date(format=config.extra.date_format) -}}
+          </time>
         </i>
       </span>
       <a href="{{post.permalink}}">{{post.title}}</a>
     </li>
     {% endfor %}
-    <a href="https://nshaw.ca/posts">View all →</a>
+    <a href="/posts">View all →</a>
   </main>
 {% endblock %}
