@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - fix/pickup-new-container
 jobs:
   build-and-push-to-gcr:
     runs-on: ubuntu-latest
@@ -11,8 +12,8 @@ jobs:
       - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
         with:
           gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          registry: gcr.io
+          registry: europe-west1-docker.pkg.dev
           project_id: ${{ secrets.GCLOUD_BLOG_PROJECT_ID }}
-          image_name: nshawca-webserver
+          image_name: cloud-run-images/nshawca-webserver
           image_tag: latest
           dockerfile: ./Dockerfile
