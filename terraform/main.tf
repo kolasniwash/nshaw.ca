@@ -1,7 +1,7 @@
 
 provider "google" {
-  project     = "nshawca"
-  region      = "europe-west1"
+  project = var.project
+  region  = "europe-west1"
 }
 
 resource "google_storage_bucket" "default" {
@@ -21,7 +21,7 @@ resource "google_cloud_run_v2_service" "default" {
 
   template {
     containers {
-      image = data.google_container_registry_image.nshawca_latest.image_url
+      image = data.google_container_registry_image.webserver_latest.image_url
       ports {
         container_port = 80
       }
@@ -41,18 +41,30 @@ data "google_client_config" "default" {}
 
 provider "docker" {
   registry_auth {
-    address = "gcr.io"
+    address  = "gcr.io"
     username = "oauth2accesstoken"
     password = data.google_client_config.default.access_token
   }
 }
 
-data "docker_registry_image" "nshawca_image" {
-  name = "gcr.io/nshawca/nshawca-webserver:latest"
+data "docker_registry_image" "webserver_image" {
+  name = "gcr.io/${var.project}/${var.image_name}:latest"
 }
 
-data "google_container_registry_image" "nshawca_latest" {
-  name = "nshawca-webserver"
-  project = "nshawca"
-  digest = data.docker_registry_image.nshawca_image.sha256_digest
+data "google_container_registry_image" "webserver_latest" {
+  name    = var.image_name
+  project = var.project
+  digest  = data.docker_registry_image.webserver_image.sha256_digest
+}
+
+variable "project" {
+  type        = string
+  description = "GCP Project ID"
+  sensitive   = true
+}
+
+variable "image_name" {
+  type        = string
+  description = "Name of the image to deploy"
+  sensitive   = true
 }
