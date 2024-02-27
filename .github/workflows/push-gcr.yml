@@ -20,6 +20,8 @@ jobs:
   tofu-deploy:
     env:
       GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCLOUD_SERVICE_KEY }}
+      ACTIONS_STEP_DEBUG: true
+      ACTIONS_RUNNER_DEBUG: true
     runs-on: ubuntu-latest
     needs: build-and-push-to-gcr
     steps:
