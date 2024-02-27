@@ -33,7 +33,7 @@ jobs:
         run: tofu fmt -check
       - name: OpenTofu init
         working-directory: ./terraform
-        run: tofu init
+        run: tofu init -lockfile=readonly
       - name: OpenTofu plan
         working-directory: ./terraform
         run: tofu plan -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
