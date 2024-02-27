@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - fix/pickup-new-container
 jobs:
   build-and-push-to-gcr:
     runs-on: ubuntu-latest
@@ -38,6 +37,6 @@ jobs:
       - name: OpenTofu plan
         working-directory: ./terraform
         run: tofu plan -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
-#      - name: Terraform Apply
-#        run: terraform apply -auto-approve
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
 
