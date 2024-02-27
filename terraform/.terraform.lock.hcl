@@ -5,7 +5,9 @@ provider "registry.opentofu.org/hashicorp/google" {
   version     = "5.17.0"
   constraints = "~> 5.17.0"
   hashes = [
+    "h1:LG75Y1Z22pnT4UwUQltsO8y4gi/bPX9y/Ma7SIOlCtQ=",
     "h1:Qog6FCod/79le0BIw8wbbSIiLkJRKRaDaq2y3SgmXaM=",
+    "h1:UCul0Iz8YER1qKSVG0VJj4T9C/Jie0GqVKCdNmr6Gx8=",
     "zh:01648f0218256309be4e90e00a788f3b28972b96cfb42081d22074494a9b555c",
     "zh:07a7da07600fef779f6b89734094ce849bf7eb700d78c815144230350f8466fb",
     "zh:246a3759b099ae75869b2ced86a5d7f7b72e3085236ddde8c191d69cc0c078f1",
@@ -24,6 +26,8 @@ provider "registry.opentofu.org/kreuzwerker/docker" {
   constraints = "2.13.0"
   hashes = [
     "h1:3NuY6XB+EMN2y327pSK0pJxsTpuaj0dLhV9VJBvxYgk=",
+    "h1:3r/gPhfPCl4mxazpfg0S/qgxmt+QWuvYT3CXTxUz9fs=",
+    "h1:Gp4HOAx3tkOaeWyM7qh184nCRmVjQSsu3CgKHac51ng=",
     "zh:0df685adc7b5740ae0def7235a44e1bce2f71beaf155319c2464ad2fba5cb321",
     "zh:2cf4b4f840fa84f1b906f4cca58c9782375e9988ad354afcd85b0180cd784205",
     "zh:347b189655afdc0df1919a26fb64cb745bb02d8fa2006a087cb6679a1b62319d",
