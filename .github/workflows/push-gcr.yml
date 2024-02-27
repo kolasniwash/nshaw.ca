@@ -12,7 +12,7 @@ jobs:
       - uses: RafikFarhad/push-to-gcr-github-action@v5-rc1
         with:
           gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          registry: europe-west1-docker.pkg.dev
+          registry: gcr.io
           project_id: ${{ secrets.GCLOUD_BLOG_PROJECT_ID }}
           image_name: ${{ secrets.GCP_RUN_IMAGE_NAME }}
           image_tag: latest
