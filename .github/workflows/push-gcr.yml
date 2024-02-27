@@ -38,5 +38,5 @@ jobs:
         working-directory: ./terraform
         run: tofu plan -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: terraform apply -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}" -auto-approve
 
