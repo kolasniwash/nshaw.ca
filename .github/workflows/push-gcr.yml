@@ -18,17 +18,13 @@ jobs:
           image_tag: latest
           dockerfile: ./Dockerfile
   tofu-deploy:
-    env:
-      GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCLOUD_SERVICE_KEY }}
-      ACTIONS_STEP_DEBUG: true
-      ACTIONS_RUNNER_DEBUG: true
     runs-on: ubuntu-latest
     needs: build-and-push-to-gcr
     steps:
       - uses: actions/checkout@v4
       - uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{env.GOOGLE_APPLICATION_CREDENTIALS}}
+          credentials_json: ${{env.GCLOUD_SERVICE_KEY}}
       - name: Set up Open Tofu
         uses: opentofu/setup-opentofu@v1
         with:
@@ -41,7 +37,7 @@ jobs:
         run: tofu init
       - name: OpenTofu plan
         working-directory: ./terraform
-        run: tofu plan -var="project_id=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
+        run: tofu plan -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve
 
