@@ -33,10 +33,10 @@ jobs:
         run: tofu fmt -check
       - name: OpenTofu init
         working-directory: ./terraform
-        run: tofu init -upgrade
-#      - name: OpenTofu plan
-#        working-directory: ./terraform
-#        run: tofu plan -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
+        run: tofu init -upgrade -lockfile=readonly
+      - name: OpenTofu plan
+        working-directory: ./terraform
+        run: tofu plan -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
       - name: Terraform Apply
         working-directory: ./terraform
         run: terraform apply -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}" -auto-approve
