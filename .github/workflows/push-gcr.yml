@@ -1,4 +1,4 @@
-name: Deploy to GCR
+name: Deploy webserver to GCP
 on:
   push:
     branches:
@@ -13,6 +13,30 @@ jobs:
           gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
           registry: gcr.io
           project_id: ${{ secrets.GCLOUD_BLOG_PROJECT_ID }}
-          image_name: nshawca-webserver
+          image_name: ${{ secrets.GCP_RUN_IMAGE_NAME }}
           image_tag: latest
           dockerfile: ./Dockerfile
+  tofu-deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-push-to-gcr
+    steps:
+      - uses: actions/checkout@v4
+      - uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
+      - name: Set up Open Tofu
+        uses: opentofu/setup-opentofu@v1
+        with:
+          tofu_version: 1.6.1
+      - name: OpenTofu fmt
+        working-directory: ./terraform
+        run: tofu fmt -check
+      - name: OpenTofu init
+        working-directory: ./terraform
+        run: tofu init
+      - name: OpenTofu plan
+        working-directory: ./terraform
+        run: tofu plan -var="project=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+

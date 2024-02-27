@@ -1,15 +1,7 @@
-terraform {
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "~> 5.17.0"
-    }
-  }
-}
 
 provider "google" {
-  project     = "nshawca"
-  region      = "europe-west1"
+  project = var.project
+  region  = "europe-west1"
 }
 
 resource "google_storage_bucket" "default" {
@@ -29,7 +21,7 @@ resource "google_cloud_run_v2_service" "default" {
 
   template {
     containers {
-      image = "gcr.io/nshawca/nshawca-webserver:latest"
+      image = data.google_container_registry_image.webserver_latest.image_url
       ports {
         container_port = 80
       }
@@ -42,4 +34,37 @@ resource "google_cloud_run_v2_service_iam_member" "noauth" {
   name     = google_cloud_run_v2_service.default.name
   role     = "roles/run.invoker"
   member   = "allUsers"
+}
+
+
+data "google_client_config" "default" {}
+
+provider "docker" {
+  registry_auth {
+    address  = "gcr.io"
+    username = "oauth2accesstoken"
+    password = data.google_client_config.default.access_token
+  }
+}
+
+data "docker_registry_image" "webserver_image" {
+  name = "gcr.io/${var.project}/${var.image_name}:latest"
+}
+
+data "google_container_registry_image" "webserver_latest" {
+  name    = var.image_name
+  project = var.project
+  digest  = data.docker_registry_image.webserver_image.sha256_digest
+}
+
+variable "project" {
+  type        = string
+  description = "GCP Project ID"
+  sensitive   = true
+}
+
+variable "image_name" {
+  type        = string
+  description = "Name of the image to deploy"
+  sensitive   = true
 }
