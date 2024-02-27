@@ -30,11 +30,13 @@ jobs:
         with:
           tofu_version: 1.6.1
       - name: OpenTofu fmt
-        id: fmt
+        working-directory: ./terraform
         run: tofu fmt -check
       - name: OpenTofu init
+        working-directory: ./terraform
         run: tofu init
       - name: OpenTofu plan
+        working-directory: ./terraform
         run: tofu plan -var="project_id=${{ secrets.GCLOUD_BLOG_PROJECT_ID }}" -var="image_name=${{ secrets.GCP_RUN_IMAGE_NAME }}"
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve
