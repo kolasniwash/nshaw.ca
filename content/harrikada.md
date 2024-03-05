@@ -25,8 +25,12 @@ title = "Harrikada team analysis"
 #### Inigo
 ![harrikada Inigo](/harrikada-inigo-second.png)
 
-## Third - Eneko
+## Third
+
+#### Eneko
 ![harrikada eneko](/harrikada-eneko.png)
 
-## Skip - Carasa
+## Skip
+
+#### Carasa
 ![harrikada carasa](/harrikada-carasa.png)

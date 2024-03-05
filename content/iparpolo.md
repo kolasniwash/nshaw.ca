@@ -18,15 +18,23 @@ title = "Iparpolo team analysis"
 ## Team Stats
 ![Iparpolo Team Stats](/iparpolo-team-stats.png)
 
-## Lead - Angel Major
+## Lead
+
+#### Angel Major
 Stats here are over weighted to guard. Consider these as front type shots.
 ![Iparpolo Angle Sr](/iparpolo-angel-sr.png)
 
-## Second - Andy
+## Second
+
+#### Andy
 ![Iparpolo Andy](/iparpolo-andy.png)
 
-## Third - Peyo
+## Third
+
+#### Peyo
 ![Iparpolo Peyo](/iparpolo-peyo.png)
 
-## Skip - Angelito
+## Skip
+
+#### Angelito
 ![Iparpolo Angle Jr](/iparpolo-angel-jr.png)

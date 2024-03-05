@@ -1,5 +1,5 @@
 +++
-title = "Txuri 2024 season end analysis"
+title = "Txuri 2023/2024 season analysis"
 +++
 
 
