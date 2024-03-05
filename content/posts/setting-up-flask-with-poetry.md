@@ -1,5 +1,5 @@
 +++
-title = "How to setup a minimum flask app with flask-login, blueprints, and flask-sqlalchemy"
+title = "Setting up a minimum flask app template"
 date = "2024-03-02"
 +++
 
@@ -74,7 +74,9 @@ def create_app():
 ```
 
 ### Adding routes
+Adding routes is done by registering a blueprint for an associated collection of views. This takes the place of the `app.route()` decorator.
 
+Using blueprints we register a view set to a specific python view. In this case we have it set to `routes.py` when we create the `blueprint` object. Once created, assigning uris is the as using the `app.routes()` decorator.
 
 ```python
 # app/routes.py
@@ -89,4 +91,7 @@ def index():
 ```
 
 ### Resources
-This is a simple setup written to remind me how I setup the my app the first time. Using `flask_blueprints` allows flexible structure in how your app is built out. Below are several resources I found useful when learning about this topic. You'll find examples of how to build and structure routes, views, and database connections.
+This is a simple setup written to remind me how I set up the app the first time. Using `flask_blueprints` allows flexible structure in how your app is built out. Below are several resources I found useful when learning about this topic. You'll find examples of how to build and structure routes, views, and database connections.
+- [Mega tutorial covering flask in depth](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+- [GitHub repo Flask application template](https://github.com/nuvic/flask_for_startups/tree/5ae30346da25890a2f94225023ba890b5fcebdd4)
+- [Set up tutorial for more advanced file structures](https://dev.to/bredmond1019/flask-application-factory-1j81)
