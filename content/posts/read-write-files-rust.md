@@ -2,10 +2,7 @@
 title = "Reading and writing files in Rust"
 date = "2024-03-06"
 +++
-
-
-
-
+Reading and writing data is an essential aspect of any programming language. Input and output operations on the file system allow new data to be brought into a running program, and persisted to disk when the program terminates. When working with frameworks these operations will often be abstracted for you. That said, having an idea how to do this is good basic knowledge of any language.
 
 ## Basic read/write flow
 
