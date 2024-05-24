@@ -3,8 +3,7 @@ title = "Txuri 2023/2024 season analysis"
 +++
 
 
--[CE Masculino Reflection 2024](/CE-Masculino-2024-analysis)
-
+- [CE Masculino Retrospective 2024](/CE-Masculino-2024-analysis)
 
 
 ## Season Analytic Summary
@@ -18,20 +17,20 @@ Playing stats look at our ability to make shots as called. These are available a
 
 | *Metric* | *All* | *WCT* | *Non WCT* |
 |----------|-------|-------|-----------|
-| Wins     | 28    | 6     | 22        |
+| Wins     | 33    | 6     | 27        |
 | Losses   | 8     | 7     | 1         |
-| HE       | 0.46  | 0.32  | 0.55      |
-| SD       | 0.26  | 0.36  | 0.18      |
-| FE       | 0.26  | 0.25  | 0.27      |
-| SE       | 0.29  | 0.28  | 0.29      |
-| BR       | 0.13  | 0.23  | 0.05      |
-| PF/G     | 7.44  | 5.28  | 8.69      |
-| PA/G     | 4.41  | 6.23  | 3.39      |
-| EF/G     | 3.66  | 3.91  | 3.23      |
-| EA/G     | 3.05  | 3.84  | 2.60      |
-| PF/E     | 0.90  | 0.65  | 1.04      |
-| PA/E     | 0.53  | 0.77  | 0.40      |
-| BE/G     | 1.02  | 0.38  | 1.39      |
+| HE       | 0.46  | 0.32  | 0.53      |
+| SD       | 0.25  | 0.36  | 0.18      |
+| FE       | 0.25  | 0.25  | 0.25      |
+| SE       | 0.33  | 0.28  | 0.34      |
+| BR       | 0.13  | 0.23  | 0.07      |
+| PF/G     | 7.78  | 5.28  | 8.96      |
+| PA/G     | 4.07  | 6.23  | 3.07      |
+| EF/G     | 3.82  | 3.91  | 4.10      |
+| EA/G     | 2.85  | 3.84  | 2.39      |
+| PF/E     | 0.94  | 0.65  | 1.08      |
+| PA/E     | 0.49  | 0.77  | 0.37      |
+| BE/G     | 1.04  | 0.38  | 1.35      |
 
 
 
