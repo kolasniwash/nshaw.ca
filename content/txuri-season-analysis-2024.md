@@ -3,8 +3,7 @@ title = "Txuri 2023/2024 season analysis"
 +++
 
 
--[WCT Events](/WCT-Events-analysis)
--[CE Masculino 2024](/CE-Masculino-2024-analysis)
+-[CE Masculino Reflection 2024](/CE-Masculino-2024-analysis)
 
 
 
@@ -78,116 +77,29 @@ A measure of each players total performance per game. [Box plots](https://en.wik
 
 ## Score Counts
 All positions. I.e. if a player played second and third, their combined score counts are shown.
+- [Score Counts Event Breakdown](/txuri-score-count-breakdown-2024.md)
+- [Lineup Score Count Analysis](/txuri-lineup-analysis-2024.md)
 
 Lineup breakdown available.
 ### All events
 ![all-players-pct-score-count-all-events](/all-players-pct-score-count-all-events-2024.png)
-
-### WCT
-![all-players-pct-count-numbers-wct](/all-players-pct-score-count-wct-2024.png)
-
-### Non WCT
-![all-players-pct-score-numbers-no-wct](/all-players-pct-score-count-no-wct-2024.png)
-
-### Lineups
-WCT
-Note: Lineup LENS has never been played in a WCT event and is not included below.
-
-NEMS
-![lineup-pct-score-count-all-NEMS-2024](/lineup-pct-score-count-wct-NEMS-2024.png)
-
-LEMS
-![lineup-pct-score-count-all-LEMS-2024](/lineup-pct-score-count-wct-LEMS-2024.png)
-
-LMNS
-![lineup-pct-score-count-all-LNMS-2024](/lineup-pct-score-count-wct-LNMS-2024.png)
-
-
-No WCT
-NEMS
-![lineup-pct-score-count-all-NEMS-2024](/lineup-pct-score-count-no-wct-NEMS-2024.png)
-
-LEMS
-![lineup-pct-score-count-all-LEMS-2024](/lineup-pct-score-count-no-wct-LEMS-2024.png)
-
-LNMS
-![lineup-pct-score-count-all-LNMS-2024](/lineup-pct-score-count-no-wct-LNMS-2024.png)
-
-LENS
-![lineup-pct-score-count-all-LENS-2024](/lineup-pct-score-count-no-wct-LENS-2024.png)
 
 
 ## Team Shot distribution
 Summary here
 ### All
 ![wct-shot-distribution](/team-all-shot-distribution-2024.png)
-### WCT
-Key figures here
-![wct-shot-distribution](/team-wct-shot-distribution-2024.png)
-### Non WCT
-Key figures here
-![non-wct-shot-distribution](/team-non-wct-shot-distribution-2024.png)
+
+- [Event type shot distributions](/txuri-2024-event-type-shot-distribuition.md)
+
 
 
 # Player position performance
+- [Lead](/txuri-player-position-performance-lead-2024)
+- [Second](/txuri-player-position-performance-second-2024)
+- [Third](/txuri-player-position-performance-third-2024)
+- [Fourth](/txuri-player-position-performance-fourth-2024)
 
-## Lead
-### All
-Luis
-![distribution-luis-lead-wct](/distribution-luis-lead-all-2024.png)
-Nico
-![distribution-nico-lead-wct](/distribution-nico-lead-all-2024.png)
-### WCT
-Luis
-![distribution-luis-lead-wct](/distribution-luis-lead-wct-2024.png)
-Nico
-![distribution-nico-lead-wct](/distribution-nico-lead-wct-2024.png)
-
-### Non WCT
-Luis
-![distribution-luis-lead-no-wct](/distribution-luis-lead-no-wct-2024.png)
-Nico
-![distribution-nico-lead-no-wct](/distribution-nico-lead-no-wct-2024.png)
-
-## Second
-### All
-Edu
-![distribution-edu-second-wct](/distribution-edu-second-all-2024.png)
-Nico
-![distribution-nico-second-wct](/distribution-nico-second-all-2024.png)
-
-### WCT
-Edu
-![distribution-edu-second-wct](/distribution-edu-second-wct-2024.png)
-Nico
-![distribution-nico-second-wct](/distribution-nico-second-wct-2024.png)
-
-### Non WCT
-Edu
-![distribution-edu-second-no-wct](/distribution-edu-second-no-wct-2024.png)
-Nico
-![distribution-nico-second-no-wct](/distribution-nico-second-no-wct-2024.png)
-
-
-## Third
-Notes:
-- Edu's results are WCT ONLY and have a small sample size (1 game)
-- Nico's results are NON WCT ONLY.
-## All
-Mikel
-![distribution-mikel-third-wct](/distribution-mikel-third-wct-2024.png)
-Edu
-![distribution-edu-third-wct](/distribution-edu-third-all-2024.png))
-Nico
-![distribution-nico-third-no-wct](/distribution-nico-third-all-2024.png)
-
-### WCT
-Mikel
-![distribution-mikel-third-wct](/distribution-mikel-third-wct-2024.png)
-
-### Non WCT
-Mikel
-![distribution-mikel-third-no-wct](/distribution-mikel-third-no-wct-2024.png)
 
 
 ## Fourth
