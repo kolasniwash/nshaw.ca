@@ -3,17 +3,16 @@ title = "Txuri 2023/2024 season analysis"
 +++
 
 
-- [CE Masculino Retrospective 2024](/CE-Masculino-2024-analysis)
+- [CE Masculino Retrospective 2024](/ce-masculino-2024-analysis)
 
-
-## Season Analytic Summary
+## Season analytic summary
 Analytics are broken into two categories: game stats and playing stats.
 
 Game stats look at our aggregate performance in competition. They measure as a proxy how we perform against competition as whole. We can use them to infer strengths and weaknesses in terms of offense and defense.
 
 Playing stats look at our ability to make shots as called. These are available aggregated at the team level, and individual levels down to shot type, and position. These stats help us understand strenghts and weaknesses of each player. They also help us understand the kind of shot distribution that is typical of each position based on the strategy we are calling as a team. When looked at in aggregate (i.e. team shooting percentage) these stats show the effect of moving players to different positions.
 
-### Key game stats
+## Key game stats
 
 | *Metric* | *All* | *WCT* | *Non WCT* |
 |----------|-------|-------|-----------|
@@ -35,7 +34,7 @@ Playing stats look at our ability to make shots as called. These are available a
 
 
 
-### Lineup Analysis
+## Lineup analysis
 | *Lineup* | *Event Type* | *Percent (%)* |
 |----------|--------------|---------------|
 | NEMS     | ALL          | 68.7          |
@@ -53,7 +52,7 @@ Playing stats look at our ability to make shots as called. These are available a
 | LEMS     | WCT          | 59.5          |
 | LEMS     | No WCT       | 70.0          |
 
-#### Lineup Legend
+### Lineup legend
 Abbreviation and description for lineups starting in playing order lead to skip. The column 'Effect of NOT on ICE' indicates the lineup is measuring the relative performance of the team lineup without that player. When we see differences between lineups we are measuring a proxy the contribution of that missing player to the overall team shooting percentage.
 
 | *Lineup* | *Players* | *Effect of NOT on ICE* |
@@ -64,33 +63,30 @@ Abbreviation and description for lineups starting in playing order lead to skip.
 | LENS     | Luis, Edu, Nico, Sergio          | Mikel                  |
 
 
-## Game averages
+# Game averages
 A measure of each players total performance per game. [Box plots](https://en.wikipedia.org/wiki/Box_plot) display game averages by quartiles with the green line representing the median performance.
-### All events
+## All events
 ![player-game-averages-all](/player-game-averages-all-2024.png)
-### WCT
+## WCT
 ![player-game-averages-wct](/player-game-averages-wct-2024.png)
-### Non WCT
+## Non WCT
 ![player-game-averages-no-wct](/player-game-averages-no-wct-2024.png)
 
 
-## Score Counts
-All positions. I.e. if a player played second and third, their combined score counts are shown.
-- [Score Counts Event Breakdown](/txuri-score-count-breakdown-2024.md)
-- [Lineup Score Count Analysis](/txuri-lineup-analysis-2024.md)
+# Score counts
+Following score counts show the frequency of a given numerical score per player. Graphic below is for all event types and includes all positions a player has played.
 
-Lineup breakdown available.
-### All events
 ![all-players-pct-score-count-all-events](/all-players-pct-score-count-all-events-2024.png)
 
+## Score count breakdowns
+- [Score counts event breakdown](/txuri-score-count-breakdown-2024)
+- [Lineup score count analysis](/txuri-lineup-analysis-2024)
 
-## Team Shot distribution
-Summary here
-### All
+# Team shot distributions
 ![wct-shot-distribution](/team-all-shot-distribution-2024.png)
 
-- [Event type shot distributions](/txuri-2024-event-type-shot-distribuition.md)
-
+## Team shot distributions breakdowns
+- [Event type shot distributions](/txuri-2024-event-type-shot-distribution)
 
 
 # Player position performance
@@ -98,26 +94,3 @@ Summary here
 - [Second](/txuri-player-position-performance-second-2024)
 - [Third](/txuri-player-position-performance-third-2024)
 - [Fourth](/txuri-player-position-performance-fourth-2024)
-
-
-
-## Fourth
-Notes:
-- Mikel's results for NON WCT have a small sample size.
-### All
-Sergio
-![distribution-sergio-skip-wct](/distribution-sergio-skip-all-2024.png)
-Mikel
-![distribution-mikel-skip-wct](/distribution-mikel-skip-all-2024.png)
-
-### WCT
-Sergio
-![distribution-sergio-skip-wct](/distribution-sergio-skip-wct-2024.png)
-Mikel
-![distribution-mikel-skip-wct](/distribution-mikel-skip-wct-2024.png)
-
-### Non WCT
-Sergio
-![distribution-sergio-skip-no-wct](/distribution-sergio-skip-no-wct-2024.png)
-Mikel
-![distribution-mikel-skip-no-wct](/distribution-mikel-skip-no-wct-2024.png)
