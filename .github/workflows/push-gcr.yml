@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'content/**'
 jobs:
   build-and-push-to-gcr:
     runs-on: ubuntu-latest
