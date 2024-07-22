@@ -13,7 +13,7 @@ title = "Txuri 2024 lineup analysis"
 
 
 # WCT
-Note: Lineup LENS has never been played in a WCT event and is not included below.
+Note: Lineup LENS has never been played in a WCT event and is not included below. Score counts updated 22-07-2024 to corrct error in query filter.
 
 ## NEMS
 ![lineup-pct-score-count-all-NEMS-2024](/lineup-pct-score-count-wct-NEMS-2024.png)
