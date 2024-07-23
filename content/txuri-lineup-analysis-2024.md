@@ -19,30 +19,37 @@ Note: Lineup LENS has never been played in a WCT event and is not included below
 
 ## NEMS
 ![lineup-pct-score-count-all-NEMS-2024](/lineup-pct-score-count-wct-NEMS-2024.png)
+
 Lead: Nico, Second: Edu, Third: Mikel, Skip: Sergio
 
 ## LEMS
 ![lineup-pct-score-count-all-LEMS-2024](/lineup-pct-score-count-wct-LEMS-2024.png)
+
 Lead: Luis, Second: Edu, Third: Mikel, Skip: Sergio
 
 ## LNMS
 ![lineup-pct-score-count-all-LNMS-2024](/lineup-pct-score-count-wct-LNMS-2024.png)
+
 Lead: Luis, Second: Nico, Third: Mikel, Skip: Sergio
 
 
 # No WCT
 ## NEMS
 ![lineup-pct-score-count-all-NEMS-2024](/lineup-pct-score-count-no-wct-NEMS-2024.png)
+
 Lead: Nico, Second: Edu, Third: Mikel, Skip: Sergio
 
 ## LEMS
 ![lineup-pct-score-count-all-LEMS-2024](/lineup-pct-score-count-no-wct-LEMS-2024.png)
+
 Lead: Luis, Second: Edu, Third: Mikel, Skip: Sergio
 
 ## LNMS
 ![lineup-pct-score-count-all-LNMS-2024](/lineup-pct-score-count-no-wct-LNMS-2024.png)
+
 Lead: Luis, Second: Nico, Third: Mikel, Skip: Sergio
 
 ## LENS
 ![lineup-pct-score-count-all-LENS-2024](/lineup-pct-score-count-no-wct-LENS-2024.png)
+
 Lead: Luis, Second: Edu, Third: Nico, Skip: Sergio
