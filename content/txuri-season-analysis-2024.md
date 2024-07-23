@@ -77,6 +77,7 @@ A measure of each players total performance per game. [Box plots](https://en.wik
 Following score counts show the frequency of a given numerical score per player. Graphic below is for all event types and includes all positions a player has played.
 
 ![all-players-pct-score-count-all-events](/all-players-pct-score-count-all-events-2024.png)
+Note: Players numbers cover multiple positions. See [Lineup score count analysis](/txuri-lineup-analysis-2024) for details on counts from specific positions.
 
 ## Score count breakdowns
 - [Score counts event breakdown](/txuri-score-count-breakdown-2024)
